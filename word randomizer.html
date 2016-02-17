@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script>
+
+var randomnumber;
+var secretword;
+var displayword = "";
+
+
+document.onkeyup = function(){
+
+	randomnumber =	Math.floor(Math.random() * 9 +1);
+
+alert (randomnumber);
+
+	switch(randomnumber){
+
+		case 1: secretword = "tomahawk";break;
+		case 2: secretword = "western";break;
+		case 3: secretword = "gunslinger";break;
+		case 4: secretword = "tumbleweed";break;
+		case 5: secretword = "cavalry";break;
+		case 6: secretword = "showdown";break;
+		case 7: secretword = "gambler";break;
+		case 8: secretword = "whosaysithastobeoneword";break;
+		case 9: secretword = "clinteastwood";break;
+
+	}
+
+alert(secretword);
+
+	for (l=0;l<secretword.length;l++){
+
+		displayword = displayword + "_";
+	}
+
+alert(displayword);
+}
+
+</script>
+
+</body>
+</html>
