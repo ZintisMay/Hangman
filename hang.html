@@ -65,34 +65,37 @@
 <!-- textbox -->
 <div class="output">
 
-	<p>Hangman</p>
+	<div class="output">
+		<h1>Hangman</h1>
 
-	<div >
-		<h4 id="text1a" class="whitefont">a</h4>
-		<p id="text1" class="whitefont"></p>
-		<br>
-		
+		<div >
+			<h4 id="text1a" class="whitefont">a</h4>
+
+			<p id="text1" class="whitefont"></p>
+		</div>
 	</div>
 
-	<p>Wrong Letters</p>
+	<div class="output">
+		<h1>Wrong Letters</h1>
 
-	<div >
+		<div >
 			<h4 id="text2a" class="whitefont">b</h4>
-		<p id="text2" class="whitefont" ></p>
-		<br>
+
+			<p id="text2" class="whitefont" ></p>
+
+		</div>
+	</div>
+
+	<div class="output">
+		
+
+		<h1 onclick="reset();" class="startmenu">Start Over</h1>
+
+		<p id="answer" class="startmenu"></p>
+
 		
 	</div>
-
-	<div id="reset" class="whitefont" onclick="reset();"/>
-
-	<p id="reset" class="startmenu">Start Over</p>
-	<p id="answer" class="startmenu"></p>
-
-	</div>
-
 </div>
-
-
 
 <!-- //pause audio button -->
 
@@ -102,10 +105,7 @@
 
 </div>
 
-
-
-
-<!-- script--------------------------------------------------------------------- -->
+<!-- script -->
 <script type="text/javascript">
 
 //alert shutdown----------------------------------------------------
@@ -175,18 +175,20 @@ if (trial == true){alert(displayword);}
 	var audio=true;
 	var imagecount = 2;
 
+	var theChange = document.getElementById('toChange');
+
 function changeimage2(p) {
    	switch (imagecount){
    		// case 0:document.getElementById('toChange').src='Hangman0.png'; imagecount++;break;
-   		case 1:document.getElementById('toChange').src='Hangman1.png'; imagecount++;break;
-   		case 2:document.getElementById('toChange').src='Hangman2.png'; imagecount++;break;
-   		case 3:document.getElementById('toChange').src='Hangman3.png'; imagecount++;break;
-   		case 4:document.getElementById('toChange').src='Hangman4.png'; imagecount++;break;
-   		case 5:document.getElementById('toChange').src='Hangman5.png'; imagecount++;break;
-   		case 6:document.getElementById('toChange').src='Hangman6.png'; imagecount++;break;
-   		case 7:document.getElementById('toChange').src='Hangman7.png'; imagecount++;break;
-   		case 8:document.getElementById('toChange').src='Hangman8.png'; imagecount++;break;
-   		case 9:document.getElementById('toChange').src='Hangman9.png';break; 
+   		case 1:theChange.src='Hangman1.png'; imagecount++;break;
+   		case 2:theChange.src='Hangman2.png'; imagecount++;break;
+   		case 3:theChange.src='Hangman3.png'; imagecount++;break;
+   		case 4:theChange.src='Hangman4.png'; imagecount++;break;
+   		case 5:theChange.src='Hangman5.png'; imagecount++;break;
+   		case 6:theChange.src='Hangman6.png'; imagecount++;break;
+   		case 7:theChange.src='Hangman7.png'; imagecount++;break;
+   		case 8:theChange.src='Hangman8.png'; imagecount++;break;
+   		case 9:theChange.src='Hangman9.png';break; 
 
    		// imagecount = 1;
    		
@@ -223,7 +225,9 @@ function pauseAudio() {
 	} 
 
 	var bang1 = document.getElementById("thebang1");
+
 		bang1.volume = 0.5;
+
 	function playAudio1() { 
 	    bang1.play(); 
 	} 
